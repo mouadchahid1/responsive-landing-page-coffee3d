@@ -1,0 +1,216 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*===== VARIABLES CSS =====*/ 
+:root {
+  --header-height : 3rem ; 
+  /* ======= Colors ============ */ 
+  --first-color : #FCA4A6 ; 
+  --first-color-dark : #C1576A ;
+  --first-color-darken : #A83E51 ;
+  --white-color : #FCF8F8 ; 
+  
+
+  /* ========= Font and Typography =========== */ 
+  --body-font : "Poppins",sans-serif; 
+  --big-font-size : 2.5rem ;
+   --normal-font-size : .938rem ;   
+
+
+   /* ========== z-index: =========; */ 
+   --z-fixed : 100 ;  
+}  
+@media screen and (min-width : 786px) {
+   :root  {
+    --big-font-size : 5rem ;
+    --normal-font-size :  1rem ; 
+   }
+}  
+/* ====== Base ======== */ 
+*{
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+} 
+body {
+  margin: var(--header-height) 0 0 0;  
+  font-family: var(--body-font); 
+  font-weight: 500;
+} 
+ul { 
+  list-style: none;
+}
+a {
+  text-decoration: none;
+} 
+img {
+  display: block; 
+  max-width: 100%; 
+  height: auto;
+} 
+ 
+  /* layout  */
+  .bg-grid {
+    max-width: 1024px; 
+    display: grid; 
+    grid-template-columns: 100%; 
+    column-gap: 2rem; 
+    width: calc(100% - 2rem);
+    margin-inline: 1rem; 
+    
+  }
+  .l-header {
+    width: 100%; 
+    position: fixed; 
+    top: 0 ; 
+    left: 0; 
+    z-index: var(--z-fixed); 
+    background-color: var(--first-color);
+  } 
+  .nav {
+    display: flex; 
+    height: var(--header-height); 
+    justify-content: space-between; 
+    align-items: center;
+  }  
+  /* show menu dans js   */
+
+  @media screen and (max-width : 768px) {
+
+    .nav__menu {
+      position: fixed; 
+      top: 0;
+      right: -100%; 
+      width: 70%;
+      height: 100%; 
+      padding: 3.5rem 1.5rem 0; 
+      background: rgba(255,255,255,.3); 
+      backdrop-filter: blur(10px);
+      transition:  .4s;
+    }
+
+  }
+  .nav__close { 
+    position: absolute; 
+    top: 1rem; 
+    right: 1rem; 
+    font-size: 1.5rem;
+    cursor: pointer;
+  }  
+  .nav__list {
+    display: flex; 
+    flex-direction: column; 
+    row-gap: 2.5rem; 
+     text-align: center;
+  }  
+  .nav__close ,.nav__link , .nav__toogle , .nav__logo {
+    color: var(--white-color);
+    transition: color .4s;
+  } 
+  .nav__link:hover {
+    color: var(--first-color-dark);
+  } 
+  .nav__toogle {
+    font-size: 1.5rem;  
+    cursor: pointer;
+  } 
+  /* show menu */
+  .show-menu {
+    right: 0;
+  }  
+
+  /* =========== la partie de home ========= */ 
+  .home { 
+    background-color: var(--first-color); 
+    overflow: hidden; 
+    height: 100vh;
+  }  
+  .home__container {  
+    height: calc( 100% - var(--header-height) );
+    grid-template-rows: repeat(2,max-content);
+    row-gap: 1.5rem;
+  } 
+.home__img {
+position: relative; 
+padding-top: 1.5rem;
+justify-self: center; 
+width: 302px ; 
+height: 233px;
+  } 
+.home__img img { 
+position: absolute; 
+top: 0;
+left: 0;
+} 
+.home__data { 
+  color: var(--white-color);
+} 
+.home__title {
+  font-size: var(--big-font-size); 
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.home__description {
+  margin-bottom: 2.5rem;
+}
+.home__button { 
+  display: inline-block; 
+  background-color: var(--first-color-darken); 
+  color: var(--white-color); 
+  padding: 1.125rem 2rem; 
+  border-radius: .5rem;
+} 
+.home__button:hover {
+  background-color: var(--first-color-dark);
+}
+ /* media query   */ 
+@media screen and (min-width : 768px) {
+  .nav { 
+    height: calc(var(--header-height) + 1.5rem); 
+
+  } 
+  .nav__toogle , 
+  .nav__close {
+         display: none;
+  }
+  .nav__list {  
+    display: flex;
+    flex-direction: row;
+    column-gap: 4rem;
+  } 
+  .home__container {
+    height: 100vh; 
+    grid-template-columns: repeat(2,max-content);
+    grid-template-rows: 1fr; 
+    row-gap: 0; 
+    align-items: center; 
+    justify-content: center;   
+  } 
+  .home__img {
+    order:1; 
+    width: 375px; 
+    height: 289px;
+  } 
+  .home__img img { 
+    widows: 375px;
+  }
+
+} 
+@media screen and (min-width : 1024px ) {
+  .bg-grid {
+    margin-inline: auto;
+  } 
+  .home__container { 
+    justify-content: initial; 
+    column-gap: 4.5rem;
+  } 
+  .home__img { 
+    width: 604px; 
+    height: 466px ;
+  } 
+  .home__img img { 
+    width: 604px;
+  }
+}
+
+
+ 

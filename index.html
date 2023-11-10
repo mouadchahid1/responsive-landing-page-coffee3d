@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Responsive landing page coffee 3D</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+          <nav class="nav bg-grid">
+           <div>
+            <a href="#" class="nav__logo">Coffe</a>
+           </div>  
+           <div class="nav__toogle" id="nav-toogle">
+               <i class="ri-menu-fill"></i>
+            </div> 
+            <div class="nav__menu" id="nav-menu">
+                  <ul class="nav__list">
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">Home</a>
+                    </li> 
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#blog" class="nav__link">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                  </ul>               
+            </div> 
+          </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home" id="home">
+              <div class="home__container bg-grid">
+                <div class="home__img">
+                       <img src="assets/img/img1.png" alt="" class="move" data-speed="-2"> 
+                       <img src="assets/img/img2.png" alt="" class="move" data-speed="2">
+                       <img src="assets/img/img3.png" alt="" class="move" data-speed="-2">
+                       <img src="assets/img/img4.png" alt="" class="move" data-speed="2">
+                       <img src="assets/img/img5.png" alt="" class="move" data-speed="-2">
+                       <img src="assets/img/img6.png" alt="" class="move" data-speed="2">
+
+
+                </div> 
+                <div class="home__data">
+                    <h1 class="home__title">Coffe <br>Drink 3d</h1> 
+                    <p class="home__description">Let 's help discover the best coffe  drink <br>of the year <br></p> 
+                    <a href="#" class="home__button">Get start</a>
+                </div>
+              </div>
+            </section>
+        </main>
+
+        <!--===== GSAP =====-->
+        <script src="assets/js/gsap.min.js"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
